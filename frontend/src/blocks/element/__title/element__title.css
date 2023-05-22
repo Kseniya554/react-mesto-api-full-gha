@@ -1,0 +1,16 @@
+.element__title {
+    margin: 0;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 29px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 210px;
+    transition: opacity 1s linear 0.5s;
+}
+
+.element__title:hover {
+    opacity: 0.6;
+}

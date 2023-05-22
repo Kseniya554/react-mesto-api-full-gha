@@ -1,0 +1,8 @@
+.element__rectangel {
+    margin-left: 21px;
+    max-width: 246px;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    align-items: center;
+}

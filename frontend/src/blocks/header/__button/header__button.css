@@ -1,0 +1,9 @@
+.header__button {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  padding: 0;
+  transition: opacity 1s linear;
+  cursor: pointer;
+  align-self: flex-start;
+}

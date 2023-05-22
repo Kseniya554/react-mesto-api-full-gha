@@ -1,0 +1,24 @@
+.header__logotip {
+    max-width: 142px;
+    max-height: 33px;
+}
+
+@media screen and (max-width: 950px) {
+    .header__logotip {
+        max-width: 650px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .header__logotip {
+        max-width: 450px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .header__logotip {
+        margin-left: 27px;
+        max-width: 103.74px;
+        max-height: 24.4px;
+    }
+}

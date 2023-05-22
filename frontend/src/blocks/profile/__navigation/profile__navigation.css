@@ -1,0 +1,13 @@
+.profile__navigation {
+    margin: 0;
+    display: flex;
+    align-self: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 650px) {
+    .profile__navigation {
+        margin-top: 26px;
+        margin-left: 10px;
+    }
+}

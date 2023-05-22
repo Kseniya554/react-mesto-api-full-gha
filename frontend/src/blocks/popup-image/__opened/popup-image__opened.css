@@ -1,0 +1,12 @@
+.popup-image__opened {
+    top: 90px;
+    margin: 0 auto;
+    left: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}

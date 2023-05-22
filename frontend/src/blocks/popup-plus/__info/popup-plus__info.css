@@ -1,0 +1,20 @@
+.popup-plus__info {
+    width: 358px;
+    padding: 0;
+    border: none;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    padding-bottom: 13.34px;
+    font-family: 'Inter', 'Arial', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+@media screen and (max-width: 550px) {
+    .popup-plus__info {
+        width: 238px;
+        padding-bottom: 13px;
+        line-height: 16.94px;
+    }
+}

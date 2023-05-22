@@ -1,0 +1,12 @@
+.element__image {
+    margin-bottom: 22px;
+    width: 282px;
+    height: 282px;
+    display: block;
+    transition: opacity 1s linear 0.5s;
+    cursor: pointer;
+}
+
+.element__image:hover {
+    opacity: 0.6;    
+}

@@ -1,0 +1,9 @@
+.popup-avatar__submit-button {
+    margin-bottom: auto;
+}
+
+@media screen and (max-width: 550px) {
+    .popup-avatar__submit-button {
+        margin-bottom: 36px;
+    }
+}

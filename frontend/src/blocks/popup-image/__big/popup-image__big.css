@@ -1,0 +1,6 @@
+.popup-image__big {
+    min-width: 433px;
+    max-width: 816px;
+    height: 562px;
+    object-fit: cover;
+}

@@ -1,0 +1,31 @@
+.profile__open-popup {
+    height: 24px;
+    width: 24px;
+    margin-left: 18px;
+    margin-bottom: 0;
+    padding: 0;
+    border: 1px solid white;
+    background-color: black;
+    background-repeat: no-repeat;
+    background-position: center;
+    justify-content: baseline;
+    align-self: center;
+    align-items: center;
+    cursor: pointer;
+    background-image: url(../../../images/redact.svg);
+    background-size: 7px;
+}
+
+.profile__open-popup:hover {
+    opacity: 0.6;
+    transition: opacity 1s linear 0.5s;
+}
+
+@media screen and (max-width: 450px) {
+    .profile__open-popup {
+        margin-left: 10px;
+        width: 18px;
+        height: 18px;
+        background-size: 5.25;
+    }
+}

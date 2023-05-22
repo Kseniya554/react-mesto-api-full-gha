@@ -1,0 +1,26 @@
+.elments {
+    margin:0 auto;
+    display: grid;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    grid-template-rows: repeat(auto-fit, 361px);
+    grid-template-columns: repeat(auto-fit, 282px);
+    column-gap: 17px;
+    row-gap: 20px;
+    justify-content: center;
+    max-width: 880px;
+    min-height: 744px;
+}
+
+@media screen and (max-width: 950px) {
+    .elments {
+        min-height: 1124px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .elments {
+        min-height: 2268px;
+    }
+}

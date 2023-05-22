@@ -1,0 +1,24 @@
+.header__nav {
+  font-family: 'Inter', 'Arial', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: right;
+  color: #FFFFFF;
+  cursor: pointer;
+  text-decoration: none;
+  transition: opacity 1s linear;
+}
+
+.header__nav:hover {
+  opacity: 80%;
+}
+
+@media screen and (max-width: 650px) {
+  .header__nav {
+    margin: auto;
+    font-size: 14px;
+    line-height: 17px;
+  }
+}

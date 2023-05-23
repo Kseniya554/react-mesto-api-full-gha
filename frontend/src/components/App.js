@@ -40,6 +40,24 @@ function App() {
   const [isInfoTooltipPopupOpen, setInfoTooltipPopupOpen] = useState(false);
   // const [infoToolTipData, setInfoToolTipData] = useState({ isOpen:false, status:false, text:'' })
 
+  useEffect(() => {
+    api.setToken();
+    if (loggedIn) {
+      api
+        .getNeededAll()
+        .then((result) => {
+          const [dataForUserInfo, dataForInitialCards] = result;
+          setCurrentUser(dataForUserInfo);
+          setCards(dataForInitialCards);
+        })
+        .catch((err) => console.log(err));
+    }
+  }, [loggedIn]);
+
+  useEffect(() => {
+    tockenCheck();
+  }, [navigate]);
+
   function tockenCheck() {
     // если у пользователя есть токен в localStorage,
     // эта функция проверит валидность токена
@@ -58,23 +76,6 @@ function App() {
         .catch((err) => console.log(err));
     }
   }
-
-  useEffect(() => {
-    if (loggedIn) {
-      api
-        .getNeededAll()
-        .then((result) => {
-          const [dataForUserInfo, dataForInitialCards] = result;
-          setCurrentUser(dataForUserInfo);
-          setCards(dataForInitialCards);
-        })
-        .catch((err) => console.log(err));
-    }
-  }, [loggedIn]);
-
-  useEffect(() => {
-    tockenCheck();
-  }, [navigate]);
 
   // function tockenCheck() {
   //   // если у пользователя есть токен в localStorage,
@@ -121,7 +122,7 @@ function App() {
           password: password,
           email: email
         });
-        api.getToken();
+        api.setToken();
         navigate('/');
     })
     .catch((error) => {

@@ -91,11 +91,11 @@ class Api {
     }).then(this._getResponseData);
   }
 
-  getToken() {
-    this._headers.authorization = `Bearer ${localStorage.getItem('jwt')}`;
+  setToken() {
+    this._headers.Authorization = `Bearer ${localStorage.getItem('jwt')}`;
   }
 
-  setToken() {
+  getToken() {
     return this._headers.authorization;
   }
 }

@@ -30,7 +30,7 @@ class Auth {
     return fetch(`${this._url}/users/me`, {
       method: "GET",
       headers: {
-        // "Accept": "application/json",
+        "Accept": "application/json",
         "Content-Type": "application/json",
         Authorization: `Bearer ${token}`,
       },

@@ -3,7 +3,7 @@ const express = require('express');
 const userRouter = express.Router();
 const { celebrate, Joi } = require('celebrate');
 const {
-  getUsers, getUser, createUser, updateUser, updateAvatar, getUserMe,
+  getUsers, createUser, updateUser, updateAvatar, getUserMe,
 } = require('../controllers/user');
 
 const regex = /^(?:([A-Za-z]+):)?(\/{0,3})([0-9.\-A-Za-z]+)(?::(\d+))?(?:\/([^?#]*))?(?:\?([^#]*))?(?:#(.*))?$/;
@@ -23,14 +23,12 @@ const validationUpdateAvatar = celebrate({
 
 userRouter.get('/users', getUsers);
 
-userRouter.get('/users/:userid', celebrate({ params: Joi.object().keys({ userId: Joi.string().hex().length(24) }) }), getUser);
+userRouter.get('/users/me', getUserMe);
 
 userRouter.post('/users', createUser);
 
 userRouter.patch('/users/me', express.json(), validationUpdateUser, updateUser);
 
 userRouter.patch('/users/me/avatar', express.json(), validationUpdateAvatar, updateAvatar);
-
-userRouter.get('/users/me', getUserMe);
 
 module.exports = userRouter;

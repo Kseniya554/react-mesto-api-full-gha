@@ -121,6 +121,7 @@ function App() {
           password: password,
           email: email
         });
+        api.getToken();
         navigate('/');
     })
     .catch((error) => {

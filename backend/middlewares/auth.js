@@ -12,7 +12,7 @@ module.exports = (req, res, next) => {
     next(new UnauthorizedError('Необходимо авторизоваться'));
     return;
   }
-  console.log(authorization);
+  // console.log({ authorization });
 
   const token = extractBearerToken(authorization);
   let payload;
@@ -25,6 +25,7 @@ module.exports = (req, res, next) => {
   }
 
   req.user = payload; // записываем пейлоуд в объект запроса
-  console.log(payload);
+  // console.log(req.user);
+
   next(); // пропускаем запрос дальше
 };

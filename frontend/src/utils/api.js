@@ -92,7 +92,11 @@ class Api {
   }
 
   getToken() {
-    return this._headers.authorization = `Bearer ${localStorage.getItem('jwt')}`;
+    this._headers.authorization = `Bearer ${localStorage.getItem('jwt')}`;
+  }
+
+  setToken() {
+    return this._headers.authorization;
   }
 }
 

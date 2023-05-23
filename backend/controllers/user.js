@@ -24,23 +24,23 @@ const getUserMe = (req, res, next) => {
     .catch(next);
 };
 
-const getUser = (req, res, next) => {
-  const { userid } = req.params;
-  User.findById(userid)
-    .orFail(() => {
-      throw new NotFoundError('Not found');
-    })
-    .then((users) => {
-      res.status(200).send(users);
-    })
-    .catch((e) => {
-      if (e.name === 'CastError') {
-        next(new BadRequestError('Невалидный id'));
-        return;
-      }
-      next(e);
-    });
-};
+// const getUser = (req, res, next) => {
+//   const { userid } = req.params;
+//   User.findById(userid)
+//     .orFail(() => {
+//       throw new NotFoundError('Not found');
+//     })
+//     .then((users) => {
+//       res.status(200).send(users);
+//     })
+//     .catch((e) => {
+//       if (e.name === 'CastError') {
+//         next(new BadRequestError('Невалидный id'));
+//         return;
+//       }
+//       next(e);
+//     });
+// };
 
 // const getUserMe = ()
 
@@ -135,5 +135,5 @@ const login = (req, res, next) => {
 };
 
 module.exports = {
-  getUsers, getUser, createUser, updateUser, updateAvatar, login, getUserMe,
+  getUsers, createUser, updateUser, updateAvatar, login, getUserMe,
 };

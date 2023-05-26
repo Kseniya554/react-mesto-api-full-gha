@@ -8,10 +8,11 @@ const getCards = (req, res, next) => {
   Card.find()
     .populate(['owner', 'likes'])
     .then((cards) => {
-      res.status(200).send({ data: cards });
+      res.status(200).send(cards);
     })
     .catch(next);
 };
+
 
 const createCard = (req, res, next) => {
   const { name, link } = req.body;

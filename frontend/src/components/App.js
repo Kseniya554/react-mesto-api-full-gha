@@ -49,6 +49,7 @@ function App() {
           const [dataForUserInfo, dataForInitialCards] = result;
           setCurrentUser(dataForUserInfo);
           setCards(dataForInitialCards);
+          // console.log(dataForInitialCards);
         })
         .catch((err) => console.log(err));
     }
@@ -248,7 +249,7 @@ function App() {
                   cards={cards}
                   onCardClick={handleCardClick}
                   onCardLike={handleCardLike}
-                  onCardDelete={handleDeleteClick} />
+                  onCardDelete={handleDeleteClick} /> 
 
                 <ProtectedRoute
                   loggedIn={loggedIn}

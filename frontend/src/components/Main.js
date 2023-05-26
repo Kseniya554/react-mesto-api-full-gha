@@ -33,7 +33,7 @@ function Main({onEditProfile, onAddPlace, onEditAvatar, onCardClick, onImagePopu
                 handleDeleteClick={onCardDelete}
               />
             ))}
-          )}        
+          )}    
     
       </section>
     </div>

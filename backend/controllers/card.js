@@ -13,7 +13,6 @@ const getCards = (req, res, next) => {
     .catch(next);
 };
 
-
 const createCard = (req, res, next) => {
   const { name, link } = req.body;
   Card.create({ name, link, owner: req.user._id })

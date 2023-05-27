@@ -13,7 +13,7 @@ function Card({card, onCardClick, onImagePopup, handleLikeClick, handleDeleteCli
   );
   return(
     <figure className="element">
-        <button className="element__delete" type="button" ></button>
+        {/* <button className="element__delete" type="button" ></button> */}
         <img className="element__image" src={card.link} alt={card.name} onClick={() => {onCardClick(card)}} />
         <div className="element__rectangel">
             <h2 className="element__title">{card.name}</h2>

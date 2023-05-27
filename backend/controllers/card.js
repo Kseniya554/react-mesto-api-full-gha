@@ -40,7 +40,7 @@ const deleteCard = (req, res, next) => {
       if (`${card.owner}` !== req.user._id) {
         throw new ForbiddenError('Нет доступа на удаление карточки');
       }
-      return Card.deleteOne()
+      return Card.findByIdAndDelete()
         .then(() => res.status(200).send(card));
     })
     .catch((err) => {

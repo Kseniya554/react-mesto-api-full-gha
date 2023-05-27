@@ -2,7 +2,7 @@
   "name": "express-mesto-gha",
   "version": "0.0.1",
   "description": "Место бэкэнд",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "lint": "npx eslint .",
     "start": "node app.js",

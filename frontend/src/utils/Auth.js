@@ -39,8 +39,8 @@ class Auth {
 }
 
 const auth = new Auth({
-  // BASE_URL: 'https://api.mesto.mesto.nomoredomains.rocks',
-  BASE_URL: 'http://localhost:3005',
+  BASE_URL: 'https://api.mesto.mesto.nomoredomains.rocks',
+  // BASE_URL: 'http://localhost:3005',
   // BASE_URL: "https://auth.nomoreparties.co",
   headers: { "Content-Type": "application/json" },
 });
